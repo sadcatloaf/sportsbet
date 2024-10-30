@@ -1,0 +1,25 @@
+body {
+    background-image: url(https://media.istockphoto.com/id/1008879868/photo/the-phantom-basketball-player.webp?a=1&b=1&s=612x612&w=0&k=20&c=4Va2Q8WaXCYfOjv8PofIMpgu0XPtwbLHn9rKmo2v4tk=);
+    background-position: center;
+    background-size: cover;
+    min-height: 130dvh;
+}
+
+#bank {
+    min-width: 20vw;
+    display: inline-block;
+}
+
+.bank {
+    width: fit-content;
+}
+
+.bank div {
+    background-color: var(--money-talks);
+}
+
+.rubik {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
