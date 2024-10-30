@@ -1,5 +1,7 @@
 let bank = 100
 
+// 🗃️ STATE
+
 const players = [
     { teamNumber: 1, emoji: '🏃‍♂️', skill: 10, name: "D'Marcus Williums" },
     { teamNumber: 1, emoji: '🤾‍♂️', skill: 30, name: "Tyroil Smoochie-Wallace" },
@@ -26,32 +28,64 @@ const players = [
 const teamOneBooElm = document.getElementById('teamOneBoo')
 const teamTwoAHHHElm = document.getElementById('teamTwoAHHH')
 
+const Teams = [
+    'teamOneBoo',
+    'teamTwoAHHH'
+]
 
+
+// 🧠 LOGIC
 
 function drawTeam1() {
     teamOneBooElm.innerText = ''
     for (let i = 0; i < players.length; i++) {
         let player = players[i]
         console.log('drawing player', player)
-        if (player.teamNumber == '1')
+        if (player.teamNumber == 'teamOneBoo')
             teamOneBooElm.innerHTML += `<span>${player.emoji}</span>`
     }
 
     console.log('the loop is over....')
 }
-drawTeam1()
 
 function drawTeam2() {
     teamTwoAHHHElm.innerText = ''
     for (let i = 0; i < players.length; i++) {
         let player = players[i]
         console.log('drawing player', player)
-        if (player.teamNumber == '2')
+        if (player.teamNumber == 'teamTwoAHHH')
             teamTwoAHHHElm.innerHTML += `<span>${player.emoji}</span>`
     }
 
     console.log('the loop is over....')
 }
-drawTeam1()
 
 
+function changeTeams() {
+    for (let i = 0; i < players.length; i++) {
+        let player = players[i]
+        let randomTeam = Math.floor(Math.random() * Teams.length)
+        player.teamNumber = Teams[randomTeam]
+        console.log('change teams', Teams)
+
+    }
+    drawTeams()
+}
+
+function drawTeams() { // draw utility, if i need to draw more than one, just re-draw all
+    drawTeam1()
+    drawTeam2()
+}
+
+
+
+
+// 🖌️ Putting it on the Page
+
+function start() {
+    changeTeams()
+    drawTeams()
+
+}
+
+start()
