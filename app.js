@@ -25,6 +25,7 @@ const players = [
     { teamNumber: 2, emoji: '🐅', skill: 100, name: "Tiger" },
 ]
 
+//#region 
 const teamOneBooElm = document.getElementById('teamOneBoo')
 const teamTwoAHHHElm = document.getElementById('teamTwoAHHH')
 
@@ -89,3 +90,21 @@ function start() {
 }
 
 start()
+//#endregion
+
+
+
+function betTeam1() {
+    let team1Skill = 0
+    let team2Skill = 0
+
+
+
+
+}
+
+
+
+
+
+
